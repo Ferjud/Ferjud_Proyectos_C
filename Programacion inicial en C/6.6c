@@ -1,0 +1,77 @@
+#include<stdio.h>
+int cifras(int,int);
+
+int main()
+{
+
+int contcifras=0,i;
+
+  for(i=10001;i<=90009;i++)
+  {
+    
+     if(cifras(i,3)>cifras(i,4))
+     {
+      contcifras++;
+      }
+      
+      }
+      
+    printf("cantidad de numeros con mas cifras 3 que 4: %d",contcifras);  
+    
+      
+    
+    return 0;
+    }
+    
+   
+   
+  int cifras(int i,int cifra)
+  {
+  
+  int cifra1,cifra2,cifra3,cifra4,cifra5;
+  int cont=0;
+   
+      cifra1=i/10000;
+      
+      cifra2=(i/1000)%10;
+      
+      cifra3=(i/100)%10;
+      
+      cifra4=(i%100)/10;
+      
+      cifra5=i%10;
+      
+  if(cifra1==4 ||  cifra2==4 ||  cifra3==4 ||  cifra4==4 ||  cifra5==4)
+  {    
+     if(cifra1==cifra)
+     {
+       cont++;
+       }
+    
+    if(cifra2==cifra)
+    {
+      cont++;
+      }
+         
+    if(cifra3==cifra)
+    {
+      cont++;
+      }
+         
+    if(cifra4==cifra)
+    {
+      cont++;
+      }
+    
+    if(cifra5==cifra)
+    {
+      cont++;
+      }
+      
+    }  
+        
+   return cont;
+   }   
+     
+    
+    
